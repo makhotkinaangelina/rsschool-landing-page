@@ -9,8 +9,149 @@
 </head>
 
 <body>
+    <header class="header">
+        <div class="header-menu">
+            <a class="logo" href="./index.html">
+                <span class="logo__main">
+                    <span class="logo__ellipse"></span>
+                    <img class="logo__text" src="./assets/images/icons/logo-resource.svg" alt="Resource">
+                </span>
+
+                <img class="logo__subtitle" src="./assets/images/icons/logo-coffee-house.svg" alt="Coffee House">
+            </a>
+
+            <div class="header-actions">
+                <div class="theme-switch">
+                    <button
+                        class="theme-switch__item theme-switch__item--light"
+                        type="button"
+                        aria-label="Light theme"
+                        data-theme="light"
+                    >
+                        <img src="./assets/images/icons/sun.svg" alt="">
+                    </button>
+
+                    <button
+                        class="theme-switch__item theme-switch__item--dark"
+                        type="button"
+                        aria-label="Dark theme"
+                        data-theme="dark"
+                    >
+                        <img src="./assets/images/icons/moon.svg" alt="">
+                    </button>
+                </div>
+
+                <button
+                    class="burger-button"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                >
+                    <span class="burger-button__lines">
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="mobile-menu" aria-label="Main navigation">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="./index.html#favorite-coffee">
+                        Favorite coffee
+                    </a>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="./index.html#about">
+                        About
+                    </a>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="./index.html#mobile-app">
+                        Mobile App
+                    </a>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="./index.html#contacts">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="./menu.html">
+                        Menu
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
     </main>
+
+    <footer class="footer" id="contacts">
+        <div class="footer__container">
+            <div class="footer__offer">
+                <h2>
+                    Sip, Savor, Smile.<br>
+                    <em>It’s coffee time!</em>
+                </h2>
+
+                <div class="footer__socials">
+                    <a class="social-button" href="#" aria-label="Twitter">
+                        <img src="./assets/images/icons/twitter.svg" alt="">
+                    </a>
+
+                    <a class="social-button" href="#" aria-label="Instagram">
+                        <img src="./assets/images/icons/instagram.svg" alt="">
+                    </a>
+
+                    <a class="social-button" href="#" aria-label="Facebook">
+                        <img src="./assets/images/icons/facebook.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="contacts-info">
+                <h3>Contact us</h3>
+
+                <ul class="contacts">
+                    <li class="contact-link">
+                        <img
+                            class="contact-link__icon"
+                            src="./assets/images/icons/address.svg"
+                            alt=""
+                        >
+                        <span class="contact-link__content">8558 Green Rd., LA</span>
+                    </li>
+
+                    <li class="contact-link">
+                        <img
+                            class="contact-link__icon"
+                            src="./assets/images/icons/phone.svg"
+                            alt=""
+                        >
+                        <span class="contact-link__content">+1 (603) 555-0123</span>
+                    </li>
+
+                    <li class="contact-link">
+                        <img
+                            class="contact-link__icon"
+                            src="./assets/images/icons/clock.svg"
+                            alt=""
+                        >
+                        <span class="contact-link__content">Mon–Sat: 9:00–23:00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>

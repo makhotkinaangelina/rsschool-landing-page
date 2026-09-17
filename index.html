@@ -100,18 +100,157 @@
         </section>
 
         <section class="slider" id="favorite-coffee">
+            <div class="slider__container">
+                <h2 class="slider__title">
+                    Choose your <em>favorite</em> coffee
+                </h2>
+
+                <div class="slider__content">
+                    <button class="slider-button slider-button--prev" type="button" aria-label="Previous coffee">
+                        <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 6.5H0.5M6.5 12.5L0.5 6.5L6.5 0.5" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+
+                    <div class="slider__track">
+                        <article class="coffee-card">
+                            <img class="coffee-card__image" src="./assets/images/coffee-slider-1.png"
+                                alt="S’mores Frappuccino">
+
+                            <div class="coffee-card__description">
+                                <h3 class="coffee-card__title">
+                                    S’mores Frappuccino
+                                </h3>
+
+                                <p class="coffee-card__text">
+                                    This new drink takes an espresso and mixes it with brown sugar and cinnamon before
+                                    being topped with oat milk.
+                                </p>
+
+                                <p class="coffee-card__price">
+                                    $5.50
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <button class="slider-button slider-button--next" type="button" aria-label="Next coffee">
+                        <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.5 6.5H13M7 12.5L13 6.5" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="slider__controls" aria-label="Coffee slider controls">
+                    <span class="slider__control slider__control--active"></span>
+                    <span class="slider__control"></span>
+                    <span class="slider__control"></span>
+                </div>
+            </div>
         </section>
 
         <section class="about" id="about">
+            <div class="about__container">
+                <div class="about__text">
+                    <h2>
+                        Resource is the <em>perfect and cozy place</em> where you can enjoy a variety of hot beverages,
+                        relax, catch up with friends, or get some work done.
+                    </h2>
+                </div>
+
+                <div class="about__images">
+                    <img class="about__image" src="./assets/images/about-1.png" alt="Coffee House interior">
+
+                    <img class="about__image" src="./assets/images/about-4.png" alt="Coffee House interior">
+                </div>
+            </div>
         </section>
 
         <section class="mobile-app" id="mobile-app">
+            <div class="mobile-app__container">
+                <div class="mobile-app__content">
+                    <h2>
+                        <em>Download</em> our app to start ordering
+                    </h2>
+
+                    <p class="mobile-app__text">
+                        Download the Resource app today and experience the comfort of ordering your favorite coffee from
+                        wherever you are
+                    </p>
+
+                    <div class="mobile-app__buttons">
+                        <a class="app-store-button" href="#" aria-label="Download on the App Store">
+                            <img class="app-store-button__icon" src="./assets/images/icons/apple.svg" alt="">
+
+                            <span class="app-store-button__text">
+                                <span class="app-store-button__caption">Available on the</span>
+                                <span class="app-store-button__name">App Store</span>
+                            </span>
+                        </a>
+
+                        <a class="app-store-button" href="#" aria-label="Get it on Google Play">
+                            <img class="app-store-button__icon" src="./assets/images/icons/google-play.svg" alt="">
+
+                            <span class="app-store-button__text">
+                                <span class="app-store-button__caption">GET IT ON</span>
+                                <span class="app-store-button__name">Google Play</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <img class="mobile-app__image" src="./assets/images/mobile-screens.png"
+                    alt="Resource mobile app screens">
+            </div>
         </section>
     </main>
 
     <footer class="footer" id="contacts">
-        <section class="contacts">
-        </section>
+        <div class="footer__container">
+            <div class="footer__offer">
+                <h2>
+                    Sip, Savor, Smile.<br>
+                    <em>It’s coffee time!</em>
+                </h2>
+
+                <div class="footer__socials">
+                    <a class="social-button" href="#" aria-label="Twitter">
+                        <img src="./assets/images/icons/twitter.svg" alt="">
+                    </a>
+
+                    <a class="social-button" href="#" aria-label="Instagram">
+                        <img src="./assets/images/icons/instagram.svg" alt="">
+                    </a>
+
+                    <a class="social-button" href="#" aria-label="Facebook">
+                        <img src="./assets/images/icons/facebook.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="contacts-info">
+                <h3>Contact us</h3>
+
+                <ul class="contacts">
+                    <li class="contact-link">
+                        <img class="contact-link__icon" src="./assets/images/icons/address.svg" alt="">
+                        <span class="contact-link__content">8558 Green Rd., LA</span>
+                    </li>
+
+                    <li class="contact-link">
+                        <img class="contact-link__icon" src="./assets/images/icons/phone.svg" alt="">
+                        <span class="contact-link__content">+1 (603) 555-0123</span>
+                    </li>
+
+                    <li class="contact-link">
+                        <img class="contact-link__icon" src="./assets/images/icons/clock.svg" alt="">
+                        <span class="contact-link__content">Mon–Sat: 9:00–23:00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
     <script src="./script.js"></script>
