@@ -1,15 +1,13 @@
 const themeSwitch = document.querySelector('.theme-switch');
-const themeButtons = document.querySelectorAll('[data-theme]');
 
 const savedTheme = localStorage.getItem('theme') || 'light';
 
 document.documentElement.dataset.theme = savedTheme;
 
-themeButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const theme = button.dataset.theme;
+themeSwitch.addEventListener('click', () => {
+    const currentTheme = document.documentElement.dataset.theme;
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
 
-    document.documentElement.dataset.theme = theme;
-    localStorage.setItem('theme', theme);
-  });
+    document.documentElement.dataset.theme = newTheme;
+    localStorage.setItem('theme', newTheme);
 });
