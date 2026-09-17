@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -11,14 +12,29 @@
 <body>
     <header class="header">
         <div class="header-menu">
-            <a class="logo" href="#">
-                <span class="logo__main">
-                    <span class="logo__ellipse"></span>
-                    <img class="logo__text" src="./assets/images/icons/logo-resource.svg" alt="Resource">
-                </span>
-
-                <img class="logo__subtitle" src="./assets/images/icons/logo-coffee-house.svg" alt="Coffee House">
+            <a class="logo" href="./index.html">
+                <img class="logo__image" src="./assets/images/icons/logo-light.svg" alt="Resource Coffee House">
             </a>
+
+            <nav class="desktop-menu" aria-label="Main navigation">
+                <ul class="desktop-menu__list">
+                    <li>
+                        <a class="menu-item" href="#favorite-coffee">Favorite coffee</a>
+                    </li>
+
+                    <li>
+                        <a class="menu-item" href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a class="menu-item" href="#mobile-app">Mobile App</a>
+                    </li>
+
+                    <li>
+                        <a class="menu-item" href="#contacts">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
 
             <div class="header-actions">
                 <div class="theme-switch">
@@ -32,6 +48,11 @@
                         <img src="./assets/images/icons/moon.svg" alt="">
                     </button>
                 </div>
+
+                <a class="menu-item menu-item--menu" href="./menu.html">
+                    <span class="menu-item__text">Menu</span>
+                    <img class="menu-item__icon" src="./assets/images/icons/coffee-cup.svg" alt="">
+                </a>
 
                 <button class="burger-button" type="button" aria-label="Open menu" aria-expanded="false">
                     <span class="burger-button__lines">
@@ -137,7 +158,7 @@
 
                     <button class="slider-button slider-button--next" type="button" aria-label="Next coffee">
                         <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.5 6.5H13M7 12.5L13 6.5" stroke="currentColor" stroke-linecap="round"
+                            <path d="M0.5 6.5H13M7 12.5L13 6.5L7 0.5" stroke="currentColor" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
                     </button>
@@ -155,15 +176,23 @@
             <div class="about__container">
                 <div class="about__text">
                     <h2>
-                        Resource is the <em>perfect and cozy place</em> where you can enjoy a variety of hot beverages,
+                        Resource is <em>the perfect and cozy place</em> where you can enjoy a variety of hot beverages,
                         relax, catch up with friends, or get some work done.
                     </h2>
                 </div>
 
                 <div class="about__images">
-                    <img class="about__image" src="./assets/images/about-1.png" alt="Coffee House interior">
+                    <div class="about__column">
+                        <img class="about__image" src="./assets/images/about-1.png" alt="Coffee House interior">
 
-                    <img class="about__image" src="./assets/images/about-4.png" alt="Coffee House interior">
+                        <img class="about__image" src="./assets/images/about-2.png" alt="Coffee House interior">
+                    </div>
+
+                    <div class="about__column">
+                        <img class="about__image" src="./assets/images/about-3.png" alt="Coffee House interior">
+
+                        <img class="about__image" src="./assets/images/about-4.png" alt="Coffee House interior">
+                    </div>
                 </div>
             </div>
         </section>
@@ -254,6 +283,7 @@
     </footer>
 
     <script src="./script.js"></script>
+
 </body>
 
 </html>

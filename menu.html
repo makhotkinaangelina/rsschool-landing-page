@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -12,41 +13,48 @@
     <header class="header">
         <div class="header-menu">
             <a class="logo" href="./index.html">
-                <span class="logo__main">
-                    <span class="logo__ellipse"></span>
-                    <img class="logo__text" src="./assets/images/icons/logo-resource.svg" alt="Resource">
-                </span>
-
-                <img class="logo__subtitle" src="./assets/images/icons/logo-coffee-house.svg" alt="Coffee House">
+                <img class="logo__image" src="./assets/images/icons/logo-light.svg" alt="Resource Coffee House">
             </a>
+
+            <nav class="desktop-menu" aria-label="Main navigation">
+                <ul class="desktop-menu__list">
+                    <li>
+                        <a class="menu-item" href="./index.html#favorite-coffee">Favorite coffee</a>
+                    </li>
+
+                    <li>
+                        <a class="menu-item" href="./index.html#about">About</a>
+                    </li>
+
+                    <li>
+                        <a class="menu-item" href="./index.html#mobile-app">Mobile App</a>
+                    </li>
+
+                    <li>
+                        <a class="menu-item" href="./index.html#contacts">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
 
             <div class="header-actions">
                 <div class="theme-switch">
-                    <button
-                        class="theme-switch__item theme-switch__item--light"
-                        type="button"
-                        aria-label="Light theme"
-                        data-theme="light"
-                    >
+                    <button class="theme-switch__item theme-switch__item--light" type="button" aria-label="Light theme"
+                        data-theme="light">
                         <img src="./assets/images/icons/sun.svg" alt="">
                     </button>
 
-                    <button
-                        class="theme-switch__item theme-switch__item--dark"
-                        type="button"
-                        aria-label="Dark theme"
-                        data-theme="dark"
-                    >
+                    <button class="theme-switch__item theme-switch__item--dark" type="button" aria-label="Dark theme"
+                        data-theme="dark">
                         <img src="./assets/images/icons/moon.svg" alt="">
                     </button>
                 </div>
 
-                <button
-                    class="burger-button"
-                    type="button"
-                    aria-label="Open menu"
-                    aria-expanded="false"
-                >
+                <a class="menu-item menu-item--menu" href="./menu.html">
+                    <span class="menu-item__text">Menu</span>
+                    <img class="menu-item__icon" src="./assets/images/icons/coffee-cup.svg" alt="">
+                </a>
+
+                <button class="burger-button" type="button" aria-label="Open menu" aria-expanded="false">
                     <span class="burger-button__lines">
                         <span class="burger-button__line"></span>
                         <span class="burger-button__line"></span>
@@ -121,29 +129,17 @@
 
                 <ul class="contacts">
                     <li class="contact-link">
-                        <img
-                            class="contact-link__icon"
-                            src="./assets/images/icons/address.svg"
-                            alt=""
-                        >
+                        <img class="contact-link__icon" src="./assets/images/icons/address.svg" alt="">
                         <span class="contact-link__content">8558 Green Rd., LA</span>
                     </li>
 
                     <li class="contact-link">
-                        <img
-                            class="contact-link__icon"
-                            src="./assets/images/icons/phone.svg"
-                            alt=""
-                        >
+                        <img class="contact-link__icon" src="./assets/images/icons/phone.svg" alt="">
                         <span class="contact-link__content">+1 (603) 555-0123</span>
                     </li>
 
                     <li class="contact-link">
-                        <img
-                            class="contact-link__icon"
-                            src="./assets/images/icons/clock.svg"
-                            alt=""
-                        >
+                        <img class="contact-link__icon" src="./assets/images/icons/clock.svg" alt="">
                         <span class="contact-link__content">Mon–Sat: 9:00–23:00</span>
                     </li>
                 </ul>
@@ -152,6 +148,7 @@
     </footer>
 
     <script src="./script.js"></script>
+
 </body>
 
 </html>
