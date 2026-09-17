@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-menu">
+            <a class="logo" href="#">
+                <span class="logo__main">
+                    <span class="logo__ellipse"></span>
+                    <img class="logo__text" src="./assets/images/icons/logo-resource.svg" alt="Resource">
+                </span>
+
+                <img class="logo__subtitle" src="./assets/images/icons/logo-coffee-house.svg" alt="Coffee House">
+            </a>
+
+            <div class="header-actions">
+                <div class="theme-switch">
+                    <button class="theme-switch__item theme-switch__item--light" type="button" aria-label="Light theme"
+                        data-theme="light">
+                        <img src="./assets/images/icons/sun.svg" alt="">
+                    </button>
+
+                    <button class="theme-switch__item theme-switch__item--dark" type="button" aria-label="Dark theme"
+                        data-theme="dark">
+                        <img src="./assets/images/icons/moon.svg" alt="">
+                    </button>
+                </div>
+
+                <button class="burger-button" type="button" aria-label="Open menu" aria-expanded="false">
+                    <span class="burger-button__lines">
+                        <span class="burger-button__line"></span>
+                        <span class="burger-button__line"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <nav class="mobile-menu" aria-label="Main navigation">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="#favorite-coffee">
+                        Favorite coffee
+                    </a>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="#mobile-app">
+                        Mobile App
+                    </a>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="#contacts">
+                        Contact Us
+                    </a>
+                </li>
+
+                <li class="mobile-menu__item">
+                    <a class="mobile-menu__link" href="./menu.html">
+                        Menu
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__container">
+                <div class="offer">
+                    <h1 class="offer__title">
+                        <em>Enjoy</em> premium coffee at our charming cafe
+                    </h1>
+
+                    <p class="offer__description">
+                        With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a
+                        popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their
+                        favorite beverage.
+                    </p>
+
+                    <a class="primary-button" href="./menu.html">
+                        <span>Menu</span>
+                        <img class="primary-button__icon" src="./assets/images/icons/coffee-cup.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="slider" id="favorite-coffee">
+        </section>
+
+        <section class="about" id="about">
+        </section>
+
+        <section class="mobile-app" id="mobile-app">
+        </section>
+    </main>
+
+    <footer class="footer" id="contacts">
+        <section class="contacts">
+        </section>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
