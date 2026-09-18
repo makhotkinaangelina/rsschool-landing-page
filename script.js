@@ -1,3 +1,44 @@
+const burgerButton = document.querySelector('.burger-button');
+const header = document.querySelector('.header');
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu__link');
+
+const toggleMobileMenu = () => {
+    const isOpen = header.classList.toggle('header--menu-open');
+
+    burgerButton.classList.toggle('burger-button--active', isOpen);
+    burgerButton.setAttribute('aria-expanded', String(isOpen));
+    burgerButton.setAttribute(
+        'aria-label',
+        isOpen ? 'Close menu' : 'Open menu'
+    );
+    document.body.classList.toggle('modal-open', isOpen);
+};
+
+if (burgerButton && header) {
+    burgerButton.addEventListener('click', toggleMobileMenu);
+
+    mobileMenuLinks.forEach((link) => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (
+            event.key === 'Escape' &&
+            header.classList.contains('header--menu-open')
+        ) {
+            closeMobileMenu();
+        }
+    });
+}
+
+const closeMobileMenu = () => {
+    header.classList.remove('header--menu-open');
+    burgerButton.classList.remove('burger-button--active');
+    burgerButton.setAttribute('aria-expanded', 'false');
+    burgerButton.setAttribute('aria-label', 'Open menu');
+    document.body.classList.remove('modal-open');
+};
+
 const themeSwitch = document.querySelector('.theme-switch');
 
 themeSwitch.addEventListener('click', () => {

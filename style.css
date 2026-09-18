@@ -643,6 +643,8 @@ h2 em {
 }
 
 .header--menu-open {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     inset: 0;
     z-index: 10;
@@ -656,6 +658,7 @@ h2 em {
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - 80px);
+    flex: 1;
 }
 
 .hero {
@@ -1573,3 +1576,4 @@ h2 em {
         padding-left: 20px;
     }
 }
+
