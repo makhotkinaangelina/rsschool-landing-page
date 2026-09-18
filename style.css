@@ -1486,8 +1486,7 @@ h2 em {
 }
 
 .modal-option--additive {
-    min-width: 104px;
-    padding: 8px 16px;
+    width: auto;
 }
 
 .modal-option--active .modal-option__icon {

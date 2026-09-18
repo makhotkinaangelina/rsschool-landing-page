@@ -97,17 +97,106 @@ const getModalTotal = () => {
     return Number(product.price) + sizePrice + additivesPrice;
 };
 
-const additiveOptions = product.additives
-    .map((additive) => `
+const renderModal = () => {
+    const { product, size, additives } = modalState;
+
+    if (!product) {
+        return;
+    }
+
+    const image = getProductImage(product);
+    const total = getModalTotal();
+
+    const sizes = Object.entries(product.sizes)
+        .map(([key, value]) => `
+            <button
+                class="modal-option ${key === size ? 'modal-option--active' : ''}"
+                type="button"
+                data-size="${key}"
+            >
+                <span class="modal-option__icon">${key.toUpperCase()}</span>
+                <span>${value.size}</span>
+            </button>
+        `)
+        .join('');
+
+    const additiveOptions = product.additives
+        .map((additive, index) => `
         <button
             class="modal-option modal-option--additive ${additives.includes(additive.name) ? 'modal-option--active' : ''}"
             type="button"
             data-additive="${additive.name}"
         >
+            <span class="modal-option__icon">${index + 1}</span>
             <span>${additive.name}</span>
         </button>
     `)
-    .join('');
+        .join('');
+
+    modal.innerHTML = `
+        <div class="modal__overlay" data-modal-close></div>
+
+        <div class="modal__body">
+            <div class="modal__image-wrapper">
+                <img
+                    class="modal__image"
+                    src="${image}"
+                    alt="${product.name}"
+                >
+            </div>
+
+            <div class="modal__content">
+                <h2 class="modal__title">${product.name}</h2>
+
+                <p class="modal__description">${product.description}</p>
+
+                <div class="modal__options">
+                    <div class="modal__option-group">
+                        <h3 class="modal__option-title">Size</h3>
+
+                        <div class="modal__options-list">
+                            ${sizes}
+                        </div>
+                    </div>
+
+                    <div class="modal__option-group">
+                        <h3 class="modal__option-title">Additives</h3>
+
+                        <div class="modal__options-list">
+                            ${additiveOptions}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal__total">
+                    <span>Total:</span>
+                    <span>$${total.toFixed(2)}</span>
+                </div>
+
+                <div class="modal__divider"></div>
+
+                <div class="modal__info">
+                    <span class="modal__info-icon">!</span>
+
+                    <p class="modal__info-text">
+                        The calorie content and nutritional value of the product may vary depending on the selected ingredients.
+                    </p>
+                </div>
+
+                <button
+                    class="secondary-button modal__close-button"
+                    type="button"
+                    data-modal-close
+                >
+                    Close
+                </button>
+            </div>
+        </div>
+    `;
+
+    modal.classList.add('modal--open');
+    document.body.classList.add('modal-open');
+};
 
 const openModal = (product) => {
     modalState.product = product;
