@@ -180,7 +180,6 @@ if (menuGrid && menuTabs.length && refreshButton) {
                 const isActive = item === tab;
 
                 item.classList.toggle('tab-item--active', isActive);
-                item.setAttribute('aria-selected', isActive);
             });
 
             renderMenu();
