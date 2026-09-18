@@ -41,7 +41,6 @@
     --menu-item-hover-border: 2px;
     --menu-item-hover-gap: 4px;
 
-    --tab-item-width: 115px;
     --tab-item-height: 46px;
     --tab-item-gap: 8px;
     --tab-item-radius: 100px;
@@ -292,7 +291,7 @@ h2 em {
 .tab-item {
     display: inline-flex;
     align-items: center;
-    width: var(--tab-item-width);
+    width: auto;
     height: var(--tab-item-height);
     gap: var(--tab-item-gap);
     padding: var(--tab-item-padding-top) var(--tab-item-padding-right) var(--tab-item-padding-bottom) var(--tab-item-padding-left);
